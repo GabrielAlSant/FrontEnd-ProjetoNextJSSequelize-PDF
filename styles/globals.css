@@ -36,3 +36,46 @@ li {
 .item-list{
   margin: 1rem;
 }
+
+.imagemcard{
+ margin:10px
+}
+
+.card{
+border: solid gray 2px;
+border-radius:5%;
+width: 220px;
+height: 325px;
+margin: 1rem;
+}
+
+.produtosindex{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+
+.nomeproduto{
+margin-left: 10px;
+max-width: 200px;
+margin-bottom: 0px;
+height: 50px;
+}
+
+.precoproduto{
+ float: left;
+ margin-left: 10px;
+ margin-top: 15px;
+ max-width: 90px;
+}
+
+.botaoproduto{
+  margin-top: 5px;
+  float: right;
+  margin-right: 10px;
+  border-radius: 30px;
+  background-color: rgb(95, 4, 75);
+  color: whitesmoke;
+  height: 40px;
+}
