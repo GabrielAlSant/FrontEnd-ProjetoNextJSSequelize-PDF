@@ -51,7 +51,7 @@ export default function Vendedores({attributes}){
           onChange={(e)=> setConsulta(e.target.value)}
           />
 
-      <CardVendedor vendedor={vendedor} key={vendedor.id} />
+      <CardVendedor vendedor={vendedor} key={attributes.id} />
 
       <center>
         <div>{Array.from(Array(pages), (pesquisas, index) =>{
