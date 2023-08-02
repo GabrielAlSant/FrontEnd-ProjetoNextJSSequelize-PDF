@@ -8,7 +8,7 @@ import { filtro } from '../../components/utils/filtro';
 
 
 export const getServerSideProps=  async (context)=>{
-    const response = await axios.get("http://localhost:3002" + "/produtos");
+    const response = await axios.get("https://grumpy-duck-getup.cyclic.app/" + "/produtos");
     const attributes = await response.data;
     return {
       props: {

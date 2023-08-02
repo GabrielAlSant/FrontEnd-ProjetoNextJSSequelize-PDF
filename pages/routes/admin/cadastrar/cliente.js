@@ -31,7 +31,7 @@ export default function Cadastrarcliente() {
     const data = {
       ...cliente,
     };
-    const url = "http://localhost:3002/cliente"
+    const url = "https://grumpy-duck-getup.cyclic.app//cliente"
 
     formData.append("nome", data.nome);
     formData.append("cpf", data.cpf);

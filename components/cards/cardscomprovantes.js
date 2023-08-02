@@ -10,7 +10,7 @@ export default function Cardcomprovantes ({comprovantes}){
     const data = {
       id: Number(id),
     };
-    const response = await axios.delete("http://localhost:3002" + `/comprovante/${id}`);
+    const response = await axios.delete("https://grumpy-duck-getup.cyclic.app/" + `/comprovante/${id}`);
     if (!response.statusText === "OK") {
       alert("Erro ao excluir a venda");
     } else {
@@ -30,7 +30,7 @@ export default function Cardcomprovantes ({comprovantes}){
         <div className="itemc">Tipo de Pagamento : {tipo}</div>
         <div className="itemc">Valor da Compra:{valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
         <button onClick={handleDelete} id={id} className="buttonexcluir"> Apagar</button>
-        <a href={`http://localhost:3002/comprovante/img/${id}`} download><button className='botaoproduto'>Baixar Comprovante de pagamento</button></a>
+        <a href={`https://grumpy-duck-getup.cyclic.app//comprovante/img/${id}`} download><button className='botaoproduto'>Baixar Comprovante de pagamento</button></a>
         </div>
       </div>
  ))}

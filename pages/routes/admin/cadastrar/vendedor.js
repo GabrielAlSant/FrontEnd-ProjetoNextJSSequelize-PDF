@@ -33,7 +33,7 @@ export default function CadastrarVendedor() {
     const data = {
       ...vendedor,
     };
-    const url = "http://localhost:3002/vendedor"
+    const url = "https://grumpy-duck-getup.cyclic.app//vendedor"
 
     formData.append("nome", data.nome);
     formData.append("cpf", data.cpf);

@@ -8,7 +8,7 @@ import Cardcomprovantes from './../../components/cards/cardscomprovantes';
 
 
 export const getServerSideProps=  async (context)=>{
-    const response = await axios.get("http://localhost:3002" + "/comprovantes");
+    const response = await axios.get("https://grumpy-duck-getup.cyclic.app/" + "/comprovantes");
     const attributes = await response.data;
     return {
       props: {

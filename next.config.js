@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true, 
   images: {
     domains: ['localhost'],
+    domains: ['grumpy-duck-getup.cyclic.app'],
   },
 }
 

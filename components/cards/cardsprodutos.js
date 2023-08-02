@@ -8,7 +8,7 @@ export default function CardProdutos ({produtos}){
          {produtos.map(({id,nome, desc, img, preco})=>(
            <div key={id}>
         <div className='card'>
-        <Image src={`http://localhost:3002/produto/img/${id}`} width={200} height={200} className="imagemcard"/>
+        <Image src={`https://grumpy-duck-getup.cyclic.app//produto/img/${id}`} width={200} height={200} className="imagemcard"/>
         <div className='nomeproduto'>{nome}</div>
         <div className='infoproduto'>
         <div className='precoproduto'>{preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>

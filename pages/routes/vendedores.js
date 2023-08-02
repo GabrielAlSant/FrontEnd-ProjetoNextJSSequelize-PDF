@@ -9,7 +9,7 @@ import CardVendedor from './../../components/cards/cardsvendedor';
 
 
 export const getServerSideProps=  async (context)=>{
-    const response = await axios.get("http://localhost:3002" + "/vendedores");
+    const response = await axios.get("https://grumpy-duck-getup.cyclic.app/" + "/vendedores");
     const attributes = await response.data;
     return {
       props: {

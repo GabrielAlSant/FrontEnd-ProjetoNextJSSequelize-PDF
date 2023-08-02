@@ -12,7 +12,7 @@ import { formatCPForCNPJ } from 'js-format-cpf-cnpj'
 
 
 export const getServerSideProps=  async (context)=>{
-    const response = await axios.get("http://localhost:3002" + "/cliente");
+    const response = await axios.get("https://grumpy-duck-getup.cyclic.app/" + "/cliente");
     const attributes = await response.data
     return {
       props: {

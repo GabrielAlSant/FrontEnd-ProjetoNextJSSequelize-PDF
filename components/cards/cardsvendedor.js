@@ -10,7 +10,7 @@ export default function CardVendedor ({vendedor}){
       const data = {
         id: Number(id),
       };
-      const response = await axios.delete("http://localhost:3002" + `/vendedor/${id}`);
+      const response = await axios.delete("https://grumpy-duck-getup.cyclic.app/" + `/vendedor/${id}`);
       if (!response.statusText === "OK") {
         alert("Erro ao excluir a venda");
       } else {
@@ -23,7 +23,7 @@ export default function CardVendedor ({vendedor}){
          {vendedor.map(({id,nome, cpf, dataInicio, turno, status, img})=>(
            <div key={id}>
         <div className='cardvendedor'>
-        <Image src={`http://localhost:3002/vendedor/img/${id}`} width={200} height={200} className="imagemcard"/>
+        <Image src={`https://grumpy-duck-getup.cyclic.app//vendedor/img/${id}`} width={200} height={200} className="imagemcard"/>
         <center><div className='nomevendedor'>{nome}</div></center>
         <div className="popup">
         <div className='infovendedor'>

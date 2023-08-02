@@ -6,9 +6,9 @@ import Header from "../../../../components/header";
 import Image from "next/image"
 
 export const getServerSideProps = async (context) => {
-  const response = await axios.get("http://localhost:3002" + "/vendedores");
-  const response1 = await axios.get("http://localhost:3002" + "/cliente");
-  const response2 = await axios.get("http://localhost:3002" + "/produtos");
+  const response = await axios.get("https://grumpy-duck-getup.cyclic.app/" + "/vendedores");
+  const response1 = await axios.get("https://grumpy-duck-getup.cyclic.app/" + "/cliente");
+  const response2 = await axios.get("https://grumpy-duck-getup.cyclic.app/" + "/produtos");
   const attributes = await response.data;
   const attributes1 = await response1.data;
   const attributes2 = await response2.data;
@@ -50,7 +50,7 @@ export default function Cadastrarcomprovante({attributes, attributes1, attribute
     const data = {
       ...comprovante,
     };
-    const url = "http://localhost:3002/comprovante"
+    const url = "https://grumpy-duck-getup.cyclic.app//comprovante"
 
     formData.append("vendedorId", data.vendedorId);
     formData.append("clienteId", data.clienteId);

@@ -7,7 +7,7 @@ import axios from 'axios';
 import Produtos from './routes/produtos';
 
 export const getServerSideProps = async (context) => {
-  const response = await axios.get("http://localhost:3002" + "/produtos");
+  const response = await axios.get("https://grumpy-duck-getup.cyclic.app/" + "/produtos");
   const attributes = await response.data;
   return {
     props: {
@@ -27,7 +27,7 @@ export default function Home({attributes}) {
     {produtos.map(({id,nome, desc, img, preco})=>(
       <div key={id}>
         <div className='card'>
-        <Image src={`http://localhost:3002/produto/img/${id}`} width={200} height={200} className="imagemcard"/>
+        <Image src={`https://grumpy-duck-getup.cyclic.app//produto/img/${id}`} width={200} height={200} className="imagemcard"/>
         <div className='nomeproduto'>{nome}</div>
         <div className='infoproduto'>
         <div className='precoproduto'>R${preco}</div>
