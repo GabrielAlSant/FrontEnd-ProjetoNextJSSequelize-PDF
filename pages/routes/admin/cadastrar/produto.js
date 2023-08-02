@@ -73,7 +73,7 @@ export default function CadastrarProduto(){
         <div>
             <Header/>
             <form onSubmit={handleSubmit}>
-        <fieldset>
+        <fieldset className="fieldcadastrarcomprovante">
           <legend>Cadastro de Produto</legend>
           <div className="">
             <span className="" id="basic-addon1">
@@ -88,7 +88,9 @@ export default function CadastrarProduto(){
               aria-label="Username"
               aria-describedby="basic-addon1"
               maxLength={25}
-            />
+              playceholder="seila"/>
+            
+            
           </div>
           <div className="">
             <span className="" id="basic-addon1">

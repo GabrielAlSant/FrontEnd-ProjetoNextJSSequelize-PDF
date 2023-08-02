@@ -17,6 +17,10 @@ li {
   list-style-type: none;
 }
 
+input {
+  font-weight: bolder;
+}
+
 .header{
   display: flex;
 }
@@ -52,6 +56,8 @@ margin: 1rem;
 .produtosindex{
   display: flex;
   flex-flow: row wrap;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 
@@ -78,4 +84,254 @@ height: 50px;
   background-color: rgb(95, 4, 75);
   color: whitesmoke;
   height: 40px;
+  cursor:pointer;
+}
+
+.botaoproduto:hover{
+  margin-top: 5px;
+  float: right;
+  margin-right: 10px;
+  border-radius: 30px;
+  background-color: white;
+  color:  rgb(95, 4, 75);
+  height: 40px;
+  cursor:pointer;
+}
+
+.barrapesquisa{
+  width: 95%;
+  border-radius: 30px;
+  height: 30px;
+  border-style: none;
+  text-align: center;
+}
+
+.botaopag{
+  background-color: rgb(95, 4, 75);
+  color: whitesmoke;
+  border-radius: 10px;
+}
+
+.indexcomprovantes{
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+
+.cardscomprovantes{
+  border:  1px gray solid;
+  border-radius: 50px;
+  padding: 2rem;
+  width: 450px;
+  margin: 1rem;
+  height: 250px;
+}
+
+.itemc{
+  margin:10px
+}
+
+.popup{
+  margin-top:10px;
+  margin-left:5px;
+  width: 180px;
+  height: 110px;
+  background-color: #161616;
+  border-radius: 50px;
+  color: whitesmoke;
+  padding: 1rem;
+}
+
+.cardvendedor{
+  border: solid gray 2px;
+  border-radius:5%;
+  width: 220px;
+  height: 400px;
+  margin: 1rem;
+  }
+
+.cardcliente{
+  height: 200px;
+}
+
+.infovendedor{
+  margin-left: 10px;
+  margin-right:10px
+}
+
+.cardcliente{
+  border: solid gray 2px;
+  border-radius:5%;
+  width: 240px;
+  height: 420px;
+  margin: 1rem;
+}
+
+.popupcliente{
+  margin-top:10px;
+  margin-left:5px;
+  width: 180px;
+  height: 60px;
+  background-color: #161616;
+  border-radius: 50px;
+  color: whitesmoke;
+  padding: 1rem;
+}
+
+.displayadmin{
+  display:flex;
+  flex-flow: row wrap;
+  margin-left:35%;
+  margin-right:35%;
+  margin-top:1%
+}
+
+.cardadmin{
+  border: 1px gray solid;
+  border-radius: 50px;
+  height: 100px;
+  width: 300px;
+  font-weight: 100px;
+  margin: 2rem;
+}
+
+.titleadmin{
+  margin:10%;
+  font-weight: bolder;
+  font-size:15px
+}
+
+.cardadmin:hover{
+  border: 1px gray solid;
+  border-radius: 50px;
+  height: 100px;
+  width: 300px;
+  font-weight: 100px;
+  margin: 2rem;
+  background-color:aliceblue;
+  color:black
+}
+
+.fieldcadastrarcomprovante{
+  margin:auto;
+  width:300px;
+  border-radius:50px;
+  padding:30px;
+}
+
+
+.fieldcadastrarcomprovante input{
+  border-radius:10px;
+  padding:5px;
+  width: 280px;
+  margin-bottom:10px;
+}
+
+.fieldcadastrarcomprovante div{
+  margin-bottom: 10px;
+}
+
+.backconfirm{
+  display:inline;
+  position: absolute;
+  background-color:white;
+  justify-content: center;
+  text-align: center;
+  height: 100px;
+  width: 150px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #161616;
+  margin-left: 5%;
+}
+
+.espace{
+margin: 5px;
+}
+
+.seta{
+  margin-top: 25%;
+}
+
+.backconfirm button{
+  border-radius: 20px;
+  background-color: #400000;
+  color: white;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.backconfirm button:hover{
+  border-radius: 20px;
+  background-color: white;
+  color: #400000;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.excluirbutton {
+  border-radius: 20px;
+  color: whitesmoke;
+  background-color:#400000;
+  padding: 10px;
+  font-weight: bolder;
+  margin-top: 25px;
+}
+
+.excluirbutton:hover{
+  border-radius: 20px;
+  background-color: white;
+  color: #400000;
+}
+
+.buttonexcluir{
+  border-radius: 20px;
+  background-color: #400000;
+  color: white;
+  padding: 10px;
+  font-weight: bolder;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.buttonexcluir:hover{
+  border-radius: 20px;
+  background-color: white;
+  color: #400000;
+  padding: 10px;
+  font-weight: bolder;
+  
+}
+
+.selectcad{
+  border-radius: 20px;
+  padding: 5px;
+  font-weight: bolder;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.d-inline{
+  display: inline;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right; 
+}
+
+.tabela{
+  border: 1px solid whitesmoke;
+  padding: 10px;
+}
+
+.tabela td {
+  border: 1px solid whitesmoke;
+  padding: 10px
 }
