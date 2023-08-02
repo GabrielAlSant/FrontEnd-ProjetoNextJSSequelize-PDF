@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { format, parseISO } from "date-fns";
 import axios  from 'axios';
-
+import Link from "next/link";
 export default function Cardcomprovantes ({comprovantes}){
 
   const handleDelete = async (e) => {
@@ -30,7 +30,7 @@ export default function Cardcomprovantes ({comprovantes}){
         <div className="itemc">Tipo de Pagamento : {tipo}</div>
         <div className="itemc">Valor da Compra:{valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
         <button onClick={handleDelete} id={id} className="buttonexcluir"> Apagar</button>
-        < href={`https://grumpy-duck-getup.cyclic.app//comprovante/img/${id}`} download><button className='botaoproduto'>Baixar Comprovante de pagamento</button></>
+        <Link href={`https://grumpy-duck-getup.cyclic.app//comprovante/img/${id}`} download><button className='botaoproduto'>Baixar Comprovante de pagamento</button></Link>
         </div>
       </div>
  ))}
