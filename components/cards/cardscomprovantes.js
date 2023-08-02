@@ -30,7 +30,7 @@ export default function Cardcomprovantes ({comprovantes}){
         <div className="itemc">Tipo de Pagamento : {tipo}</div>
         <div className="itemc">Valor da Compra:{valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
         <button onClick={handleDelete} id={id} className="buttonexcluir"> Apagar</button>
-        <a href={`https://grumpy-duck-getup.cyclic.app//comprovante/img/${id}`} download><button className='botaoproduto'>Baixar Comprovante de pagamento</button></a>
+        < href={`https://grumpy-duck-getup.cyclic.app//comprovante/img/${id}`} download><button className='botaoproduto'>Baixar Comprovante de pagamento</button></>
         </div>
       </div>
  ))}

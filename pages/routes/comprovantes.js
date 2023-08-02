@@ -37,7 +37,7 @@ export default function Produtos({attributes}){
             <Header/>
       
 
-          <Cardcomprovantes comprovantes={comprovantes} />
+          <Cardcomprovantes comprovantes={comprovantes} key={comprovantes.id}/>
 
       <center>
         <div>{Array.from(Array(pages), (pesquisas, index) =>{

@@ -1,29 +1,30 @@
 import Header from "../../../components/header";
+import Link from "next/link";
 
 export default function PagAdmin() {
     return (
         <div>
             <Header/>
             <div className="displayadmin">
-                <a href="/routes/admin/cadastrar/cliente"><div className="cardadmin">
+                <Link href="/routes/admin/cadastrar/cliente"><div className="cardadmin">
                     <div className="titleadmin">Cadastrar um Novo Cliente</div>
                     </div>
-                    </a>
-                <a href="/routes/admin/cadastrar/vendedor">
+                    </Link>
+                <Link href="/routes/admin/cadastrar/vendedor">
                 <div className="cardadmin">
                     <div className="titleadmin">Cadastrar um Novo vendedor</div>
                     </div>
-                </a>
-                <a href="/routes/admin/cadastrar/produto">
+                </Link>
+                <Link href="/routes/admin/cadastrar/produto">
                 <div className="cardadmin">
                     <div className="titleadmin">Cadastrar um Novo produto</div>
                     </div>
-                    </a> 
-                <a href="/routes/admin/cadastrar/comprovante">
+                    </Link> 
+                <Link href="/routes/admin/cadastrar/comprovante">
                     <div className="cardadmin">
                     <div className="titleadmin">Cadastrar uma nova venda</div>
                     </div>
-                    </a> 
+                    </Link> 
             </div >
         </div >
     )

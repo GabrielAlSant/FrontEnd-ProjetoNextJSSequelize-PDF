@@ -39,7 +39,7 @@ export default function clienteSolo({attributes, wastedata,produtodata}){
                 <tr><td>Valor</td><td>Data</td><td>Tipo</td><td>Produto</td></tr>
             {attributes.comprovantes.map(({id, valor,data,tipo})=>(
             
-                <tr><td>{valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td><td>{format(parseISO(data), "dd/MM/yyyy")}</td><td>{tipo}</td><td>a{produtodata.produto.nome}</td></tr>
+                <tr key={id}><td>{valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</td><td>{format(parseISO(data), "dd/MM/yyyy")}</td><td>{tipo}</td><td>a{produtodata.produto.nome}</td></tr>
           
         ))}
           </table>

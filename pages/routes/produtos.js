@@ -41,7 +41,7 @@ export default function Produtos({attributes}){
           placeholder='Pesquisar'
           onChange={(e)=> setConsulta(e.target.value)}
           />
-      <CardProdutos produtos={produtos} />
+      <CardProdutos produtos={produtos} key={produtos.id} />
 
       <center>
         <div>{Array.from(Array(pages), (pesquisas, index) =>{
