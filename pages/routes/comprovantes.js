@@ -37,11 +37,11 @@ export default function Produtos({attributes}){
             <Header/>
       
 
-          <Cardcomprovantes comprovantes={comprovantes} key={attributes.id}/>
+          <Cardcomprovantes comprovantes={comprovantes} />
 
       <center>
         <div>{Array.from(Array(pages), (pesquisas, index) =>{
-        return <button type="button" className="botaopag" value={index} onClick={(e) =>setCurrentPage
+        return <button key={index} type="button" className="botaopag" value={index} onClick={(e) =>setCurrentPage
         (Number(e.target.value))}>{index + 1}</button>})}
         </div>
         </center>

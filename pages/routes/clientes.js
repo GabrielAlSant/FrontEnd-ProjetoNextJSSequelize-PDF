@@ -52,11 +52,11 @@ export default function Vendedores({attributes}){
           onChange={(e)=> setConsulta(e.target.value)}
           />
 
-      <CardCliente cliente={cliente} key={attributes.id}/>
+      <CardCliente cliente={cliente} key={attributes}/>
 
       <center>
         <div>{Array.from(Array(pages), (pesquisas, index) =>{
-        return <button type="button" className="botaopag" value={index} onClick={(e) =>setCurrentPage
+        return <button key={index} type="button" className="botaopag" value={index} onClick={(e) =>setCurrentPage
         (Number(e.target.value))}>{index + 1}</button>})}
         </div>
         </center>

@@ -41,11 +41,11 @@ export default function Produtos({attributes}){
           placeholder='Pesquisar'
           onChange={(e)=> setConsulta(e.target.value)}
           />
-      <CardProdutos produtos={produtos} key={attributes.id} />
+      <CardProdutos produtos={produtos} />
 
       <center>
         <div>{Array.from(Array(pages), (pesquisas, index) =>{
-        return <button type="button" className="botaopag" value={index} onClick={(e) =>setCurrentPage
+        return <button key={index} type="button" className="botaopag" value={index} onClick={(e) =>setCurrentPage
         (Number(e.target.value))}>{index + 1}</button>})}
         </div>
         </center>
