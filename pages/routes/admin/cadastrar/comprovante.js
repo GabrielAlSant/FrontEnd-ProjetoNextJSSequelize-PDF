@@ -6,9 +6,9 @@ import Header from "../../../../components/header";
 import Image from "next/image"
 
 export const getServerSideProps = async (context) => {
-  const response = await axios.get("https://grumpy-duck-getup.cyclic.app/" + "/vendedores");
-  const response1 = await axios.get("https://grumpy-duck-getup.cyclic.app/" + "/cliente");
-  const response2 = await axios.get("https://grumpy-duck-getup.cyclic.app/" + "/produtos");
+  const response = await axios.get("https://d30d46f4-6bff-41c6-86f6-bd819958b76f-00-11b66wssx37sj.spock.replit.dev" + "/vendedores");
+  const response1 = await axios.get("https://d30d46f4-6bff-41c6-86f6-bd819958b76f-00-11b66wssx37sj.spock.replit.dev" + "/cliente");
+  const response2 = await axios.get("https://d30d46f4-6bff-41c6-86f6-bd819958b76f-00-11b66wssx37sj.spock.replit.dev" + "/produtos");
   const attributes = await response.data;
   const attributes1 = await response1.data;
   const attributes2 = await response2.data;
@@ -34,6 +34,30 @@ export default function Cadastrarcomprovante({attributes, attributes1, attribute
 
   });
 
+  const handleInputChange = async (e) => {
+    const { id, value } = e.target;
+  
+    if (id === "produtoId") {
+      try {
+        const response = await axios.get(`https://d30d46f4-6bff-41c6-86f6-bd819958b76f-00-11b66wssx37sj.spock.replit.dev/produto/${value}`);
+        const produtoSelecionado = response.data;
+  
+        setendedor({
+          ...comprovante,
+          [id]: value,
+          valor: produtoSelecionado ? produtoSelecionado.preco : "", 
+        });
+      } catch (error) {
+        console.error("Erro ao buscar detalhes do produto:", error);
+        // Trate o erro conforme necessário
+      }
+    } else {
+      setendedor({ ...comprovante, [id]: value });
+    }
+  };
+  
+  
+
   let router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -50,7 +74,7 @@ export default function Cadastrarcomprovante({attributes, attributes1, attribute
     const data = {
       ...comprovante,
     };
-    const url = "https://grumpy-duck-getup.cyclic.app//comprovante"
+    const url = "https://d30d46f4-6bff-41c6-86f6-bd819958b76f-00-11b66wssx37sj.spock.replit.dev/comprovante"
 
     formData.append("vendedorId", data.vendedorId);
     formData.append("clienteId", data.clienteId);
@@ -80,16 +104,13 @@ export default function Cadastrarcomprovante({attributes, attributes1, attribute
 
 
 
-  const handleInputChange = (e) => {
-    const { id, value } = e.target;
-    setendedor({ ...comprovante, [id]: value });
-  };
+ 
 
   const handleFileSelect = (e) => {
     setFile(e.target.files[0]);
   };
 
-  const { nome, vendedorId, clienteId, produtoId, tipo, data,compravant } = comprovante;
+  const {vendedorId, clienteId, produtoId,valor, tipo, data,compravant } = comprovante;
   return (
     <div>
       <Header />
@@ -146,6 +167,7 @@ export default function Cadastrarcomprovante({attributes, attributes1, attribute
               aria-describedby="basic-addon1"
               list="listaproduto"
             />
+             <button onClick={(e) => { e.preventDefault(); setendedor({ ...comprovante, produtoId: '' }); }}>Limpar Campo</button>
 
 <datalist id="listaproduto">
                   {attributes2.map(({ id, nome }) => (
@@ -162,6 +184,7 @@ export default function Cadastrarcomprovante({attributes, attributes1, attribute
               value={comprovante.valor}
             >
             </input>
+           
             <div>Tipo de Pagamento</div>
             <input id="tipo"
               type="text"

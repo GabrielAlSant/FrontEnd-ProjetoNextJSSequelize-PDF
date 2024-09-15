@@ -13,7 +13,7 @@ export default function CardCliente ({cliente}){
     const data = {
       id: Number(id),
     };
-    const response = await axios.delete("https://grumpy-duck-getup.cyclic.app/" + `/cliente/${id}`);
+    const response = await axios.delete("https://d30d46f4-6bff-41c6-86f6-bd819958b76f-00-11b66wssx37sj.spock.replit.dev/" + `/cliente/${id}`);
     if (!response.statusText === "OK") {
       alert("Erro ao excluir a venda");
     } else {
@@ -21,6 +21,7 @@ export default function CardCliente ({cliente}){
     }
   };
 
+  
 
  const [popup, setPopup] = useState(false)
     return (
@@ -28,7 +29,7 @@ export default function CardCliente ({cliente}){
       {cliente.map(({id,nome, cpf, dataInicio, img})=>(
         <div key={id}>
      <div className='cardcliente'>
-     <Image src={`https://grumpy-duck-getup.cyclic.app//cliente/img/${id}`} width={200} height={200} className="imagemcard"/>
+     <Image src={`https://d30d46f4-6bff-41c6-86f6-bd819958b76f-00-11b66wssx37sj.spock.replit.dev//cliente/img/${id}`} width={200} height={200} className="imagemcard"/>
      <center><div className='nomevendedor'>{nome}</div></center>
      <div className="popupcliente">
      <div className='infocliente'>
@@ -37,6 +38,7 @@ export default function CardCliente ({cliente}){
 
 </div>
 <div className="d-flex">
+<button className="excluirbutton" onClick={handleDelete}>Excluir</button>
 <Link href={`/routes/soloroutes/cliente/${id}`}><button  className="excluirbutton">Sobre</button></Link>
 </div>
      </div>

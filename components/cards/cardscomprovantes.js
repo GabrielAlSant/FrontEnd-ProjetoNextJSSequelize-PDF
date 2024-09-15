@@ -2,6 +2,7 @@ import Image from "next/image"
 import { format, parseISO } from "date-fns";
 import axios  from 'axios';
 import Link from "next/link";
+
 export default function Cardcomprovantes ({comprovantes}){
 
   const handleDelete = async (e) => {
@@ -10,7 +11,7 @@ export default function Cardcomprovantes ({comprovantes}){
     const data = {
       id: Number(id),
     };
-    const response = await axios.delete("https://grumpy-duck-getup.cyclic.app/" + `/comprovante/${id}`);
+    const response = await axios.delete("https://d30d46f4-6bff-41c6-86f6-bd819958b76f-00-11b66wssx37sj.spock.replit.dev" + `/comprovante/${id}`);
     if (!response.statusText === "OK") {
       alert("Erro ao excluir a venda");
     } else {
@@ -30,7 +31,7 @@ export default function Cardcomprovantes ({comprovantes}){
         <div className="itemc">Tipo de Pagamento : {tipo}</div>
         <div className="itemc">Valor da Compra:{valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
         <button onClick={handleDelete} id={id} className="buttonexcluir"> Apagar</button>
-        <Link href={`https://grumpy-duck-getup.cyclic.app//comprovante/img/${id}`} download><button className='botaoproduto'>Baixar Comprovante de pagamento</button></Link>
+        <Link href={`https://d30d46f4-6bff-41c6-86f6-bd819958b76f-00-11b66wssx37sj.spock.replit.dev//comprovante/img/${id}`} download><button className='botaoproduto'>Baixar Comprovante de pagamento</button></Link>
         </div>
       </div>
  ))}

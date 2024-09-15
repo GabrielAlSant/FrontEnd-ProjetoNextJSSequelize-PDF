@@ -26,14 +26,14 @@ export default function CadastrarVendedor() {
       (element) => element === ""
     );
     if (emptyFieldCheck) {
-      toast.error("Há algum campo vazio");
+      alert("Há algum campo vazio");
       return;
     }
 
     const data = {
       ...vendedor,
     };
-    const url = "https://grumpy-duck-getup.cyclic.app//vendedor"
+    const url = "https://d30d46f4-6bff-41c6-86f6-bd819958b76f-00-11b66wssx37sj.spock.replit.dev/vendedor"
 
     formData.append("nome", data.nome);
     formData.append("cpf", data.cpf);
@@ -58,7 +58,6 @@ export default function CadastrarVendedor() {
         console.log(error.response);
       });
   }
-
 
 
 
@@ -146,6 +145,9 @@ export default function CadastrarVendedor() {
               onChange={handleInputChange}
               value={vendedor.status}
             >
+              <option  selected> 
+                Selecione
+              </option>
               <option key={"Operando"} value={"Operando"}>
                 Operando
               </option>

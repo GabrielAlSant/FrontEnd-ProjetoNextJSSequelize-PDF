@@ -31,7 +31,7 @@ export default function CadastrarProduto(){
         const data = {
           ...produto,
         };
-        const url = "https://grumpy-duck-getup.cyclic.app//produto"
+        const url = "https://d30d46f4-6bff-41c6-86f6-bd819958b76f-00-11b66wssx37sj.spock.replit.dev/produto"
          
         
         formData.append("nome", data.nome);
